@@ -1,6 +1,10 @@
 document.getElementById('addBurger').addEventListener('click', event => {
     event.preventDefault()
   
+    if (document.getElementById('burger').value == '' || document.getElementById('burger').value == null){
+      alert ("Please click in the add burger to continue!")
+      return false
+    } else {
     axios.post('/api/burgers', {
       burger_name: document.getElementById('enter').value,
       devoured: false
@@ -22,7 +26,8 @@ document.getElementById('addBurger').addEventListener('click', event => {
         document.getElementById('burger').value = ''
       })
       .catch(err => console.error(err))
-  })
+    }
+    })
   
   document.addEventListener('click', event => {
     if (event.target.classList.contains('devoured')) {
