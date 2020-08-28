@@ -6,7 +6,7 @@
     <div class="col-md-12">
       <form>
         <div class="form-group">
-          <label for="enter">Enter the burger you want to eat</label>
+          <label for="burger">Enter the burger you want to eat</label>
           <input type="text" class="form-control" id="burger">
         </div>
         <button type="submit" id="addBurger" class="btn btn-primary">Add Burger</button>
@@ -23,8 +23,7 @@
         <li id="{{ this.id }}" class="list-group-item">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.burger_name }}</h5>
-            <button
-              data-name="{{ this.burger_name }}"
+            <button data-name= "{{ this.burger_name }}"
               class="devoured btn btn-success">Devoured It!</button>
           </div>
         </li>
