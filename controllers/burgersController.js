@@ -18,7 +18,7 @@ router.post('/burgers', (req, res) => {
 
 // Update one burger
 router.put('/burgers/:id', (req, res) => {
-  burgers.updateOne(req.body, { id: req.params.id }, () => {
+  burger.updateOne(req.body, { id: req.params.id }, () => {
     res.sendStatus(200)
   })
 })
